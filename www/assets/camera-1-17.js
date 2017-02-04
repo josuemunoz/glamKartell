@@ -72,7 +72,7 @@ var logMe =
 			}
 			//alert(li.length);
 			
-			setTimeout("logMe.displayFolders()", 2500);
+			setTimeout("logMe.displayFolders()", 2000);
 			var url = document.URL;
 				var newurl = url.indexOf("#");
 				if(url.substring(newurl) == "#appGallery"){

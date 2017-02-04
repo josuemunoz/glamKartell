@@ -6,11 +6,11 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     
-    
-<!--
+   <!--
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src *; object-src *; style-src *; img-src *; media-src *; frame-src *; connect-src *" /> 
-<meta http-equiv="X-Content-Security-Policy" content="default-src *; script-src *; object-src *; style-src *; img-src *; media-src *; frame-src *; connect-src *" /> -->
 
+<meta http-equiv="X-Content-Security-Policy" content="default-src *; script-src *; object-src *; style-src *; img-src *; media-src *; frame-src *; connect-src *" /> 
+ -->
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <title>Master App</title>
@@ -90,11 +90,6 @@ function thePath(){ //this will return the path of current user
 	
 $(document).ready( function(){
 
-		
-		
-		appSettings();
-		phones();
-		module();
 
 			
 			
@@ -802,19 +797,25 @@ customCss{ width:40%; float:left; color:#FFF;}
 
 
 <script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" language="javascript" src="http://m.josue45.com/mobile/mobileTest/camera-1-17.js"></script>
-<!--  <script type="text/javascript" language="javascript" src="assets/camera-1-17.js"></script> -->
 
+ <!-- <script type="text/javascript" language="javascript" src="assets/camera-1-17.js"> </script> -->
 
+<script type="text/javascript" language="javascript" src="http://m.josue45.com/mobile/mobileTest/camera-1-17.js"> </script>
 
  <script type="text/javascript">
-			app.initialize();
+			setTimeout("app.initialize()", 1500);
 			window.onload = function(){
 				
-				document.addEventListener("scroll", lookAtImagesPosition, false);
+		
+	appSettings();
+		phones();
+		module();
+document.addEventListener("scroll", lookAtImagesPosition, false);		
+				//document.addEventListener("scroll", lookAtImagesPosition, false);
 				//setTimeout("lookAtImagesPosition()",1000);
 		}
         </script>  
+        
  <!-- <script src="http://www.josue45.com/assets/js/jm.js" type="text/javascript"></script> -->
 </body>
 </html>
